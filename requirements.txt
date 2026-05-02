@@ -1,0 +1,27 @@
+# HardwareMCP Requirements
+# Python dependencies for the HardwareMCP project
+
+# MCP (Model Context Protocol) SDK
+# Core library for building MCP servers
+mcp>=1.0.0
+
+# OpenAI SDK (for xAI Grok API compatibility)
+# Used by the AI agent to interact with Grok
+openai>=1.0.0
+
+# Testing dependencies
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Type checking and code quality
+mypy>=1.5.0
+black>=23.7.0
+flake8>=6.1.0
+isort>=5.12.0
+
+# Development dependencies
+python-dotenv>=1.0.0
+
+# Optional: For enhanced logging and monitoring
+coloredlogs>=15.0.1
