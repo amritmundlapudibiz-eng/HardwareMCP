@@ -148,7 +148,7 @@ class HardwareMCPAgent:
 
         # Call Grok API
         response = self.client.chat.completions.create(
-            model="grok-beta",
+            model="grok-3",
             messages=messages,
             temperature=0.7,
             max_tokens=1000
