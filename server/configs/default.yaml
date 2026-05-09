@@ -1,0 +1,79 @@
+# HardwareMCP — Default Profile
+#
+# This is the built-in simulator profile.
+# Copy this file, rename it, and edit it to match your hardware.
+# Then run:
+#   HARDWAREMCP_PROFILE=configs/my_device.yaml python -m server.main
+#
+# Supported sensor kinds: temperature, voltage, current, pressure, humidity, generic
+
+name: default-simulator
+
+sensors:
+
+  - id: temp_0
+    kind: temperature
+    label: Temperature Sensor 0
+    unit: celsius
+    min_val: -40
+    max_val: 150
+    warn_high: 80
+    crit_high: 100
+
+  - id: voltage_0
+    kind: voltage
+    label: Voltage Channel 0
+    unit: volts
+    min_val: 0
+    max_val: 60
+    warn_low: 10
+    crit_low: 8
+    warn_high: 55
+    crit_high: 58
+
+  - id: current_0
+    kind: current
+    label: Current Channel 0
+    unit: amperes
+    min_val: 0
+    max_val: 200
+    warn_high: 150
+    crit_high: 180
+
+  - id: pressure_0
+    kind: pressure
+    label: Pressure Sensor 0
+    unit: bar
+    min_val: 0
+    max_val: 10
+    warn_high: 8
+    crit_high: 9.5
+
+can_buses:
+
+  - id: can0
+    label: CAN Bus 0
+    bitrate: 500000
+
+gpio:
+
+  - pin: 0
+    mode: input
+    label: Digital Input 0
+
+  - pin: 1
+    mode: input
+    label: Digital Input 1
+
+  - pin: 2
+    mode: output
+    label: Digital Output 0
+
+  - pin: 3
+    mode: output
+    label: Digital Output 1
+
+imu:
+
+  - id: imu0
+    label: IMU 0
